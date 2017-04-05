@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>顾磊的简历</title>
+    <link rel="stylesheet" href="css/fontello.min.css">
+    <link rel="stylesheet" href="css/resume-animation.css">
+    <script src="js/resume.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #e0e0e0;
+            font-family: 'Helvetica Neue', Helvetica, 'Lucida Grande', Arial, 'Hiragino Sans GB', 微软雅黑, 'WenQuanYi Micro Hei', STHeiti, SimSun, sans-serif;
+            min-width: 1080px
+        }
+
+        li, ul {
+            list-style: none
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        #container {
+            width: 1020px;
+            margin: 10px auto;
+            -webkit-border-radius: 4px;
+            -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .sidebar {
+            width: 300px;
+            background: #00bfa5;
+            padding: 15px 15px 2500px;
+            -webkit-border-radius: 4px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sidebar:before {
+            content: '';
+            height: 100%;
+            width: 30px;
+            background: rgba(225, 225, 225, 0.2);
+            position: absolute;
+            left: -800px;
+            top: 0;
+            display: block;
+            transform: rotate(5deg);
+            animation: sidebar 2s forwards;
+        }
+
+        .slate {
+            height: 150px;
+        }
+
+        .title {
+            margin: 30px auto;
+            height: 120px;
+            width: 150px;
+        }
+
+        .title img {
+            -webkit-border-radius: 50%;
+            height: 120px;
+            width: 120px;
+            -ms-border-radius: 50%;
+        }
+
+        #side-info {
+            width: 250px;
+            margin: 0 auto;
+            position: relative;
+
+        }
+
+        #side-info li:nth-child(2) {
+            position: absolute;
+            top: 150px;
+        }
+
+        #side-info li:nth-child(3) {
+            position: absolute;
+            top: 250px;
+        }
+
+        #side-info li:nth-child(4) {
+            position: absolute;
+            top: 450px;
+
+        }
+
+        #side-info li:nth-child(5) {
+            position: absolute;
+            top: 650px;
+
+        }
+
+        #side-info h2 {
+            font-size: 18px;
+            color: #333;
+            background: rgba(200, 200, 50, 1);
+            line-height: 30px;
+            border-radius: 3px;
+            position: absolute;
+            top: -10px;
+            width: 220px;
+            z-index: 10;
+             transition:all 2s; overflow: hidden;
+        }
+        #side-info h2:after{content:'';width: 10px; height: 60px; transform:skewX(-25deg); background-color: rgba(255,255,255,0.5); position: absolute;left: -10px; top: 0; opacity: 0;}
+        #side-info h2:hover{background-color:rgba(0,0,0,1); color: #fff;}
+        #side-info h2:hover:after{left: 220px; opacity: 1 ;transition:0.5s; }
+        #side-info h2:hover {
+            cursor: pointer;
+        }
+
+        #side-info i {
+            color: #fff;
+        }
+
+        #side-info div {
+            color: #000;
+            transform-origin: top;
+            transform: rotateX(240deg);
+            transition: all 3s;
+            width: 220px;
+            position: absolute;
+            left: 0;
+            top: 21px;
+            transform-style: preserve-3d;
+            border-bottom: 1px solid #fff;
+            font-size: 15px;
+
+        }
+
+        #side-info > div:nth-of-type(1) {
+            position: absolute;
+            top: 30px;
+        }
+
+
+        .main {
+            position: absolute;
+            top:0;
+            left: 300px;
+            width: 720px;
+            padding: 15px 20px 2500px;
+            background: #f0f2f1;
+            margin-bottom: -10000px
+        }
+
+        .main a {
+            color: #4db6ac
+        }
+
+        .main-info > li {
+            padding-top: 20px
+        }
+
+        .main-info dt {
+            font-size: 24px;
+            color: #00796b;
+            line-height: 30px;
+            border-bottom: 1px solid #00796b;
+            margin: 0 0 15px -5px
+        }
+
+        .main-info dd {
+            font-size: 15px;
+            line-height: 27px;
+            color: #616161
+        }
+
+        h4, h5 {
+            color: #000
+        }
+
+        .main-info span {
+            color: #000;
+            font-size: 16px
+        }
+
+        .exp p, footer a, footer p {
+            color: #616161
+        }
+
+        h3 {
+            font-size: 19px;
+            color: #004d40;
+            margin: 0 0 15px 5px
+        }
+
+        h4 {
+            line-height: 30px;
+            font-size: 18px;
+            bottom: 3px
+        }
+
+        h5 {
+            clear: both;
+            font-size: 16px;
+            line-height: 25px
+        }
+
+        .fa {
+            margin-right: 2px
+        }
+
+        h4 a, h5 a {
+            font-size: 12px;
+            border: 1px solid #4db6ac;
+            padding: 1px 3px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            margin-left: 7px
+        }
+
+        .circle {
+            height: 14px;
+            width: 14px;
+            -webkit-border-radius: 100%;
+            border-radius: 100%;
+            background: #00796b;
+            float: left;
+            position: absolute;
+            left: -28px;
+            top: 5px
+        }
+
+        .exp {
+            border-left: 2px solid #00796b;
+            margin-left: 15px
+        }
+
+        .exp p {
+            font-size: 15px;
+            line-height: 22px;
+            margin-bottom: 3px
+        }
+
+        .exp > li {
+            position: relative;
+            top: -5px;
+            margin: 0 0 20px 20px
+        }
+
+        .exp img {
+            width:180px;
+            border: 1px #000 solid;
+            transition: all 1s;
+        }
+        .exp img:hover{transform: scale(1.1)}
+        .exp ul > li {
+            margin: 0 0 12px
+        }
+
+        .efe .task4img img {
+            height: 97px;
+            width: inherit
+        }
+        .main-info img:hover i{color: crimson; display: block;}
+
+
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="sidebar">
+        <div class="title">
+            <img src="image/head.jpg">
+        </div>
+        <div class="slate">
+            <h1>Hello</h1>
+            <strong>This is:</strong>
+            <h2>
+                <p>顾</p>
+                　　<p>磊</p>
+                <p>的</p>
+                <p>简</p>
+                <p>历</p>
+            </h2>
+        </div>
+        <ul id="side-info">
+            <li>
+                <h2><i class="icon-bookmark"></i>Contact. 联系方式</h2>
+                <div><i class="icon-mail-alt"></i>邮箱:798245277@qq.com
+                    <div><i class="icon-wechat"></i>微信: 13482863395
+                        <div><i class="icon-qq"></i>QQ:798245277
+                            <div>
+                                <i class="icon-phone"></i>电话:13482863395
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h2><i class="icon-bookmark"></i>Application. 应聘岗位</h2>
+                <div>
+                    前端工程师 HTML5
+
+                </div>
+            </li>
+            <li>
+                <h2><i class="icon-bookmark"></i>Tech. 技能点</h2>
+                <div>
+                    HTML:80%
+                    <div>
+                        CSS:75%
+                        <div>JavaScript:50%
+                            <div>Jquery:了解
+                                <div>
+                                    Angular.js:了解
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h2><i class="icon-bookmark"></i>Basic info. 基本信息</h2>
+                <div>
+                    姓名:顾磊
+                    <div>
+                        性别:男
+                        <div>家庭住址:上海市松江区九亭
+                            <div>学历:大专
+                                <div>
+                                    毕业学校:上海电子信息职业技术学院
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h2><i class="icon-bookmark"></i>自我介绍</h2>
+                <div> 我熟悉了解HTML5和CSS3标准
+                    <div>
+                        精通响应式布局,
+                        <div>
+                            和javascript前端交互开发；
+
+                            <div>我还了解移动端的制作
+                                <div>
+                                    并使用过ionic,ajax,nood.js
+                                    <div>
+                                        知道同步与异步请求的好处,
+
+                                        <div>
+                                            还了解Jquery,angular.js等框架.
+                                            <div>
+                                                在工作中我是一个细心的员工,
+                                                <div>
+                                                    我会把领导者交代的百分百完成.
+                                                    <div>
+                                                        我是一个充满活力、
+                                                        <div>
+                                                            善于发现问题的前端工程师。
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <ul class="main-info">
+            <li>
+                <dt><i class="icon-bookmark"></i>Experience. 项目与工作经验</dt>
+                <h3>上海永大电梯(中国)有限公司（2013.4 - 2016.9）</h3>
+                <ul class="exp">
+                    <li>
+                        <div class="circle"></div>
+                        <h4>设计助理</h4>
+                        <p>主要负责出口电梯的设计、拼装、出库、查验等事项，设计电梯，制作图纸等。</p>
+                    </li>
+                </ul>
+                <h3>个人项目</h3>
+                <ul class="exp">
+                    <li>
+                        <div class="circle"></div>
+                        <h4>HTML+CSS静态页面<a href="https://guleileilei.github.io/Pizza-Western-Restaurant-/%E6%8A%AB%E8%90%A8%E8%A5%BF%E9%A4%90%E5%8E%85/"
+                                           target="_blank"><i class="icon-link"></i>源代码</a></h4>
+                        <p>实现一个披萨西餐厅网站的首页、产品介绍等静态页面，合理运用HTML语义化标签和CSS动画</p>
+                        <img src="image/task0001.jpg">
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <h4>HTML+CSS+JS静态页面<a href="https://guleileilei.github.io/yugat/%E6%B0%B8%E5%A4%A7%E7%94%B5%E6%A2%AF/" target="_blank"><i
+                                class="icon-link"></i>源代码</a></h4>
+                        <p>实现公司管网站的首页、产品介绍等静态页面，合理运用HTML语义化标签和CSS动画</p>
+                        <img src="image/task0005.jpg">
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <h4>购物商城<a href="https://github.com/guleileilei/SportStoreStu" target="_blank"><i
+                                class="icon-link"></i>源代码</a></h4>
+                        <p>通过angular.js实现购物商城框架，实现不同种类的分类、分页效果，点击加入购物车、结算等效果</p>
+                        <img src="image/task0002.png">
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <h4>聊天室<a href="https://github.com/guleileilei/chatroom" target="_blank"><i class="icon-link"></i>源代码</a>
+                        </h4>
+                        <p>通过Node.js写的简单聊天室，实现多人聊天、用户进入、离开时系统提示，显示当前在线人数</p>
+                        <img src="image/task0003.jpg">
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <h4>天气预报<a href="https://github.com/guleileilei/weather-forecast" target="_blank"><i
+                                class="icon-link"></i>源代码</a>
+                        </h4>
+                        <p>通过Ajax写的天气预报，实现天气状况查询,与后三日天气情况;实现了异步请求
+                        </p>
+                        <img src="image/task0004.jpg">
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <h4>微信小程序<a href="https://github.com/guleileilei/WeChat-small-program" target="_blank"><i
+                                class="icon-link"></i>源代码</a></h4>
+                        <p>微信小程序,实现了视屏播放和用户登录等功能</p>
+                        <img src="image/task0004-3.png">
+                        <img src="image/task0004-2.png">
+                        <img src="image/task0004-1.jpg">
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <dt><i class="icon-bookmark"></i>Skill. 技能清单</dt>
+                <h3>Web前端</h3>
+                <ul class="exp">
+                    <li>
+                        <div class="circle"></div>
+                        <h4>HTML / CSS</h4>
+                        <p>能够编写语义化的 HTML，模块化的 CSS，完成较复杂的布局</p>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <h4>JavaScript</h4>
+                        <p>熟悉原生Javascript，能脱离jQuery等类库编码</p>
+                        <p>能运用模块化、面向对象的方式编程</p>
+                        <p>了解 jQuery AngularJS 的使用</p>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <h4>Bootstrap/Node.js</h4>
+                        <p>了解 Bootstrap Node.js 的使用</p>
+                        <p>了解前端安全、性能优化方面的一些知识</p>
+                    </li>
+                </ul>
+                <h3>其他</h3>
+                <ul class="exp">
+                    <li>
+                        <p>严重强迫症，不能忍受界面一个像素的偏差，同样不能忍受代码格式一个空格的偏差</p>
+                        <p>学习能力强</p>
+                        <p>了解 Git 等开发工具的使用</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>
